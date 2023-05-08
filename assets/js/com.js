@@ -104,3 +104,25 @@ setTimeout(function() {
 var today = new Date()
 today.setDate(today.getFullYear() + 1)
 setCookie('returningVisitor', 'yes', today)
+
+
+// Utiliza a API de Geolocalização do navegador para identificar a localização do usuário
+navigator.geolocation.getCurrentPosition(function(position) {
+  // Obtém a latitude e longitude do usuário
+  var latitude = position.coords.latitude;
+  var longitude = position.coords.longitude;
+
+  // Utiliza a API do OpenCage para obter o nome da cidade com base na latitude e longitude
+  var url = "https://api.opencagedata.com/geocode/v1/json?q=" + latitude + "+" + longitude + "&key=dc02561f975646158af400187e581966";
+  fetch(url)
+    .then(response => response.json())
+    .then(data => {
+      // Obtém o nome da cidade a partir da resposta da API
+      var cidade = data.results[0].components.city || data.results[0].components.town || data.results[0].components.village || data.results[0].components.county;
+
+      // Atualiza a frase com a localização obtida e o número de mulheres aleatório entre 1 e 1000
+      document.getElementById("numero-mulheres").innerText = Math.floor(Math.random() * 1000) + 1;
+      document.getElementById("localizacao").innerText = cidade;
+    });
+});
+
