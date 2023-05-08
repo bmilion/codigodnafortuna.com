@@ -45,6 +45,33 @@
       }
     </style>
 
+<div id="faixa-topo" style="background-color: red; color: white; text-align: center; padding: 10px;">
+  Você e mais <span id="num-pessoas"></span> pessoas próximas de <span id="cidade"></span> foram selecionadas para assistir essa apresentação.
+</div>
+<script>
+  // Utiliza a API de Geolocalização do navegador para identificar a localização do usuário
+  fetch("https://ipapi.co/json/")
+    .then(response => response.json())
+    .then(data => {
+      // Obtém o nome da cidade a partir da resposta da API
+      var cidade = data.city;
+
+      // Atualiza a faixa no topo com a cidade obtida
+      document.getElementById("cidade").innerText = cidade;
+
+      // Gera um número aleatório de 1 a 70
+      var numPessoas = Math.floor(Math.random() * 70) + 15;
+
+      // Atualiza a faixa no topo com o número de pessoas gerado
+      document.getElementById("num-pessoas").innerText = numPessoas;
+
+    // Define a fonte da faixa no topo com tamanho de 14px
+      document.getElementById("faixa-topo").style.fontSize = "14px";
+    });
+
+</script>
+
+
 
     <!-- Meta Pixel Code -->
     
@@ -62,8 +89,9 @@
 
             <!-- IMAGEM Ultrasecreto -->
 
+
             <!-- Headline -->
-            <h3 class="my-4"><b>Descubra como <span class="red-background">pessoas comuns estão tendo suas vidas transformadas</span> simplesmente por ativarem isso pela manhã👇</b></h3>
+            <h3 class="my-4"><b>Descubra como <span class="red-background">pessoas comuns estão tendo suas vidas transformadas</span> simplesmente por fazerem isso pela manhã👇</b></h3>
 
                 <style>
   .red-background {
@@ -83,6 +111,7 @@
               <a href="https://pay.kiwify.com.br/vB4BB3p" class="a-btn" style="text-decoration: none;">
                 <span class="span-btn">QUERO OBTER ACESSO!</span>
                 <span class="span-btn2">(atenção: vagas limitadas)</span>
+
               </a>
             </div>
           </div>
@@ -437,7 +466,7 @@
                         </td>
                       </tr>
                       <tr>
-                        <td class="fb-comments-comment-text">Emocionada por ter encontrado esse vídeo gratidao </td>
+                        <td class="fb-comments-comment-text">Minha neta que mora em Los Angeles que me enviou, ela conseguiu comprar a casa que queria lá depois de ativar isso na rotina, realmente incrivel os segredos</td>
                       </tr>
                       <tr>
                         <td class="fb-comments-comment-actions">
