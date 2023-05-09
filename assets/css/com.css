@@ -25,21 +25,6 @@ body {
   font-size: 16px;
 }
 
-
-#faixa-topo {
-  background-color: #F5A623;
-  color: #FFFFFF;
-  font-size: 18px;
-  font-weight: bold;
-  text-align: center;
-  padding: 10px;
-}
-
-#faixa-topo span {
-  font-size: 24px;
-}
-
-
 .fb-comments {
   border: 1px solid #e9ebee;
   border-radius: 3px;
@@ -287,4 +272,3 @@ tr {
       font-style: italic;
       text-shadow: #000000 0px 1px 0px;
     }
-
