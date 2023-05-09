@@ -45,31 +45,9 @@
       }
     </style>
 
-<div id="faixa-topo" style="background-color: red; color: white; text-align: center; padding: 10px;">
-  Você e mais <span id="num-pessoas"></span> pessoas próximas de <span id="cidade"></span> foram selecionadas para assistir essa apresentação.
+<div style="background-color: red; color: white; font-size: 14px; padding: 10px; text-align: center;">
+  Assista até o final. Esta é a sua <b>ÚNICA OPORTUNIDADE</b>.
 </div>
-<script>
-  // Utiliza a API de Geolocalização do navegador para identificar a localização do usuário
-  fetch("https://ipapi.co/json/")
-    .then(response => response.json())
-    .then(data => {
-      // Obtém o nome da cidade a partir da resposta da API
-      var cidade = data.city;
-
-      // Atualiza a faixa no topo com a cidade obtida
-      document.getElementById("cidade").innerText = cidade;
-
-      // Gera um número aleatório de 1 a 50
-      var numPessoas = Math.floor(Math.random() * 50) + 15;
-
-      // Atualiza a faixa no topo com o número de pessoas gerado
-      document.getElementById("num-pessoas").innerText = numPessoas;
-
-    // Define a fonte da faixa no topo com tamanho de 14px
-      document.getElementById("faixa-topo").style.fontSize = "14px";
-    });
-
-</script>
 
 
 
