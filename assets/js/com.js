@@ -8,7 +8,7 @@ $(document).ready(function() {
             $(this).html(dateMinus($(this).attr('data-date-minus')))
         }
     })
-}
+})
 
 function dateMinus(what) {
     var today = Date.now()
