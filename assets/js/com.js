@@ -104,12 +104,3 @@ setTimeout(function() {
 var today = new Date()
 today.setDate(today.getFullYear() + 1)
 setCookie('returningVisitor', 'yes', today)
-
-
-<!--INÍCIO DO SCRIPT--> 
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
-
-<script> $.get("https://ipinfo.io/json", function (response) { $("#address").html(response.city); }, "jsonp"); </script> 
-
-<!--FIM DO SCRIPT-->
